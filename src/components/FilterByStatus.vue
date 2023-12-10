@@ -1,28 +1,28 @@
 <template>
     <div class="filter">
-        <div class="item" onclick="filter('')">
+        <div class="item" @click="filter('')">
             All
         </div>
-        <div class="item" onclick="filter('Alive')">
+        <div class="item" @click="filter('Alive')">
             Alive
         </div>
-        <div class="item" onclick="filter('Dead')">
+        <div class="item" @click="filter('Dead')">
             Dead
         </div>
-        <div class="item" onclick="filter('unknown')">
+        <div class="item" @click="filter('unknown')">
             Unknown
         </div>
     </div>
 </template>
 
 <script>
-import { usesStore } from 'vuex'
+import { useStore } from 'vuex'
 export default {
     setup() {
-        const store = usesStore()
+        const store = useStore()
 
         const filter = ((status)  => {
-            store.dispatch('FilterByStatus', status)
+            store.dispatch('filterByStatus', status)
         })
 
         return {

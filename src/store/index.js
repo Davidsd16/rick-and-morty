@@ -7,7 +7,7 @@ export default createStore({
     },
 
     
-    
+
     mutations: {
         setCharacters(state, payload) {
           state.characters = payload
@@ -31,7 +31,7 @@ export default createStore({
       },
 
       filterByStatus ({commit, state}, status){
-        const results = state.characters.filter((character)=> {
+        const results = state.characters.filter((character) => {
           return character.status.includes(status)
         })
         commit ('setCharactersFilter', results)

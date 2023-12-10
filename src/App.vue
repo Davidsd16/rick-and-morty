@@ -8,7 +8,7 @@
 
 <script>
 import ListCharacters from '@/components/ListCharacters'
-import FilterByStatus from './components/FilterByStatus.vue'
+import FilterByStatus from '@/components/FilterByStatus'
 export default {
   name: 'App',
   components: {
