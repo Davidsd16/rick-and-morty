@@ -2,20 +2,20 @@ import { createStore } from 'vuex'
 
 export default createStore({
     state: {
-        Characters: [],
-        CharactersFilter: []
+        characters: [],
+        charactersFilter: []
     },
 
-    getters: {
-    },
+   // getters: {
+  //  },
 
     mutations: {
         setCharacters(state, payload) {
-          state.Characters = payload
+          state.characters = payload
         },
 
         setCharactersFilter(state, payload) {
-          state.CharactersFilter = payload
+          state.charactersFilter = payload
         }
 
     },

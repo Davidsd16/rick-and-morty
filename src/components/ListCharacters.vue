@@ -1,6 +1,7 @@
 <template>
     <section>
         <div class="characters">
+            <h2>Characters</h2>
             <div class="characters__item" v-for="character in characters" :key="character.id">
                 {{ character.name }}
             </div>
@@ -17,11 +18,9 @@ export default {
         const characters = computed(() => {
             return store.state.charactersFilter
         })
-      //  console.log(characters)
         onMounted(() => {
             store.dispatch('getCharacters')
         })
-        
         return {
             characters
         }
