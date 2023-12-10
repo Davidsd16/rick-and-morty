@@ -1,10 +1,11 @@
 <template>
     <section>
         <div class="characters">
-            <h2>Characters</h2>
+
             <div class="characters__item" v-for="character in characters" :key="character.id">
                 <CardCharacter :character="character" />
             </div>
+            
         </div>
     </section>
 </template>
@@ -34,5 +35,10 @@ export default {
 </script>
 
 <style>
-
+.characters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 3rem 0;
+}
 </style>
