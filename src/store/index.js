@@ -17,7 +17,6 @@ export default createStore({
         setCharactersFilter(state, payload) {
           state.charactersFilter = payload
         }
-
     },
 
     actions: {

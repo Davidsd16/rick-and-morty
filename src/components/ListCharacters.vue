@@ -3,7 +3,7 @@
         <div class="characters">
             <h2>Characters</h2>
             <div class="characters__item" v-for="character in characters" :key="character.id">
-                {{ character.name }}
+                <CardCharacter :character="character" />
             </div>
         </div>
     </section>
@@ -12,7 +12,12 @@
 <script>
 import { computed, onMounted } from 'vue'
 import { useStore } from 'vuex'
+import CardCharacter from './CardCharacter.vue'
+
 export default {
+    components: {
+        CardCharacter
+    },   
     setup() {
         const store = useStore()
         const characters = computed(() => {
