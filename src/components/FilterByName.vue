@@ -11,9 +11,10 @@
 <script>
 import { ref } from 'vue'
 import { useStore } from 'vuex'
+
 export default {
     setup() {
-        const store = useStore
+        const store = useStore()
         const name = ref('')
 
         const filter = () => {
@@ -27,6 +28,7 @@ export default {
     }
 }
 </script>
+
 
 <style lang="scss">
 .search {
